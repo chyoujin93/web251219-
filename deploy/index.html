@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유진페이지</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* [CSS 디자인 영역] - 옷을 입히는 곳 */
+        body {
+            /* 폰트 지정: Noto Sans KR을 기본으로 사용합니다. */
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f4f4f9; /* 배경색 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        /* 명함 같은 하얀 박스 */
+        .card {
+            background-color: white;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* 그림자 진하게 */
+            text-align: center;
+        }
+
+        /* 프로필 사진 */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 원형 만들기 */
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #4a90e2; /* 메인 색상으로 테두리 변경 */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        p.job-title {
+            color: #4a90e2; /* 강조색으로 변경 */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p.description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            word-break: keep-all; 
+        }
+
+        /* 소셜 링크 버튼들 */
+        .links a {
+            text-decoration: none;
+            color: white;
+            background-color: #4a90e2; 
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px;
+            transition: background 0.3s, transform 0.2s; /* 애니메이션 추가 */
+        }
+
+        .links a:hover {
+            background-color: #357abd;
+            transform: translateY(-2px); /* 살짝 떠오르는 효과 */
+        }
+        
+        /* GitHub 전용 버튼 스타일 */
+        .links a.github {
+            background-color: #333; /* GitHub 공식 색상 */
+        }
+
+        .links a.github:hover {
+            background-color: #555;
+        }
+        
+        /* 이메일 전용 버튼 스타일 */
+        .links a.email {
+            background-color: #D44638; /* 이메일 (빨강) 색상 */
+        }
+
+        .links a.email:hover {
+            background-color: #b83226;
+        }
+        
+        /* 아이콘과 텍스트 사이 간격 */
+        .links a i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="introduce.jpg" alt="최유진 프로필 사진" class="profile-img">
+        
+        <h1>최유진</h1>
+        <p class="job-title">웹 개발자 꿈나무 🌱</p>
+        
+        <p class="description">
+            안녕하세요! 배움의 즐거움을 아는 개발자 최유진입니다.<br>
+            HTML과 CSS를 공부하며 나만의 웹사이트를<br>
+            만들어 나가고 있습니다. 저와 함께 성장해요!
+        </p>
+
+        <div class="links">
+            <a href="[당신의 GitHub 주소]" target="_blank" class="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="mailto:email@example.com" class="email">
+                <i class="fas fa-envelope"></i> 이메일 보내기
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

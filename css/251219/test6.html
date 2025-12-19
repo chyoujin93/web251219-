@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 정중앙 정렬 실습</title>
+    <style>
+        .container {
+            /* 2. 높이와 배경색 설정 */
+            height: 300px;
+            background-color: lightgray;
+            border: 1px solid black; /* 구분을 위해 추가 */
+
+            /* 3. Flexbox 선언 */
+            display: flex;
+
+            /* 4. 주축(가로) 중앙 정렬 */
+            justify-content: center;
+
+            /* 5. 교차축(세로) 중앙 정렬 */
+            align-items: center;
+        }
+
+        .box {
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Center Me!</div>
+    </div>
+</body>
+
+</html>
