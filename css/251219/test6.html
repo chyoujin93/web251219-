@@ -4,37 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox 정중앙 정렬 실습</title>
+    <title>Document</title>
     <style>
-        .container {
-            /* 2. 높이와 배경색 설정 */
-            height: 300px;
-            background-color: lightgray;
-            border: 1px solid black; /* 구분을 위해 추가 */
+        .card {
+            width: 200px;
+            height: 100px;
+            background: white;
+            background-color: gold;
+            border-radius: 10px;
 
-            /* 3. Flexbox 선언 */
-            display: flex;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-            /* 4. 주축(가로) 중앙 정렬 */
-            justify-content: center;
+            /* 변화를 부드럽게 만들기 (필수!) */
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* 같은 효과 
+	        transition: all 0.3s;
+	        transition: 0.3s;
+	        */
 
-            /* 5. 교차축(세로) 중앙 정렬 */
-            align-items: center;
         }
 
-        .box {
-            background-color: steelblue;
-            color: white;
-            padding: 20px;
-            font-weight: bold;
-            font-size: 1.2em;
+        .card:hover {
+            /* 위로 이동하는 효과 */
+            /* transform: translateY(-10px); */
+            /* 1.2배 확대하는 효과 */
+            /* transform: scale(1.2); */
+            /* 회전하는 효과 */
+            transform: rotate(45deg);
+            /* 위로 5px 이동 */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            /* 그림자 강화 */
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="box">Center Me!</div>
+    <div class="card">
+        전환, 변형 효과 주기1
     </div>
 </body>
 

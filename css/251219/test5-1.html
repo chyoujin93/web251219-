@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리 실습</title>
+    <style>
+        body {
+            background-color: white;
+            /*배경색 화이트*/
+            color: black;
+            /*글자색 블랙*/
+            font-family: Arial, sans-serif;
+            /* 기본 글꼴 설정 */
+            padding: 20px;
+            /* 여백 추가 */
+        }
+
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            /* 상품이 2개 이상일 경우 줄바꿈 허용 */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .product {
+            /* 요구사항 1: 기본 너비 50% (gap을 고려하여 약간 작게 설정) */
+            width: calc(50% - 5px);
+            background-color: lightgray;
+            /* 요구사항 1: 기본 배경색 */
+            padding: 15px;
+            box-sizing: border-box;
+            /* padding이 width에 포함되도록 설정 */
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        /* ----------------------------------- */
+        /* 미디어 쿼리 시작 */
+        /* ----------------------------------- */
+
+        /* ----------------------------------- */
+        /* 실습 5: 화면 너비가 500px 이하일 때 (다크 모드 흉내) */
+        /* ----------------------------------- */
+        @media screen and (max-width: 500px) {
+            body {
+                background-color: black;
+                /* 배경색 black */
+                color: white;
+                /* 글자색 white */
+            }
+        }
+
+        /* ----------------------------------- */
+        /* 실습 6: 화면 너비가 600px 이하일 때 (모바일: 1개씩) */
+        /* ----------------------------------- */
+        @media screen and (max-width: 600px) {
+            .product {
+                width: 100%;
+                /* 요구사항 3: 너비 100%로 변경 */
+                background-color: pink;
+                /* 요구사항 3: 배경색 pink로 변경 */
+            }
+
+            .product-list {
+                gap: 0;
+                /* 모바일에서 100%일 때 gap 제거 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🌙 실습 5: 다크 모드 흉내</h2>
+    <p>브라우저 창을 500px 이하로 줄여보세요. 
+        이 글과 배경색이 반전됩니다.</p>
+<br><br><br><br>
+    <h2>📦 실습 6: 반응형 상품 목록</h2>
+    <p>PC (600px 초과): 
+        상품이 한 줄에 2개씩 보입니다. 
+        배경색: lightgray</p>
+    <p>모바일 (600px 이하): 
+        상품이 한 줄에 1개씩 보입니다. 
+        배경색: pink</p>
+
+    <div class="product-list">
+        <div class="product">상품 A</div>
+        <div class="product">상품 B</div>
+        <div class="product">상품 C</div>
+        <div class="product">상품 D</div>
+    </div>
+
+    <hr>
+
+
+
+</body>
+
+</html>
